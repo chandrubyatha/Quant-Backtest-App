@@ -119,7 +119,7 @@ class BacktestEngine:
 # ==========================================
 # STREAMLIT USER INTERFACE
 # ==========================================
-st.title("📈 Quantitative Backtesting & Strategy Analytics Engine")
+st.title("Quantitative Backtesting & Strategy Analytics Engine")
 st.markdown("A professional backtesting terminal to design, evaluate, and analyze technical trading strategies.")
 
 # Sidebar Configuration
@@ -148,7 +148,7 @@ if run_button:
                 metrics = engine.calculate_metrics()
 
                 # --- KPI Metrics Display ---
-                st.subheader("📊 Strategy Performance Summary")
+                st.subheader("Strategy Performance Summary")
                 col1, col2, col3, col4 = st.columns(4)
                 
                 col1.metric("Final Capital", f"${metrics['Final Portfolio Value ($)']:,}", f"{metrics['Total Return (%)']}% Total")
@@ -165,7 +165,7 @@ if run_button:
                 st.markdown("---")
 
                 # --- Visualizations ---
-                st.subheader("📉 Performance & Signals Charts")
+                st.subheader("Performance & Signals Charts")
                 
                 fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 8), sharex=True, gridspec_kw={'height_ratios': [2, 1]})
 
